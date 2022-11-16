@@ -221,15 +221,15 @@ img {
 
 .imagen-rutas{
     height: 40rem;
-    background-image: url(../img/nosotros.png);
+    background-image: url(../img/rutas.jpg);
     background-repeat: no-repeat;
     background-position:center center;
     background-size: 100%;
 }
 @media (min-width: 768px) { 
     .imagen-rutas{
-        height: 49rem;
-        background-size: 310%;
+        height: 100%;
+        /* background-size: 310%; */
     }
 }
 /** sobre nosotros **/ 
@@ -376,6 +376,16 @@ img {
     }
 }
 
+/** videos **/
+.videos{
+
+}
+@media (min-width: 768px) { 
+    .videos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }   
+}
 /** footer **/
 .footer {
     height: 50rem;
