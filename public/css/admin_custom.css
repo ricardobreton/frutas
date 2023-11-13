@@ -1,0 +1,21 @@
+/** css para secciones **/
+.datos-imagen img{
+    max-width: 500px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombreado */
+    transition: transform 0.3s ease-in-out; /* Transición al poner el mouse */
+    margin: 0 auto;
+}
+.datos-imagen img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+}
+.galeria img {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombreado */
+    transition: transform 0.3s ease-in-out; /* Transición al poner el mouse */
+}
+
+.galeria img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+}

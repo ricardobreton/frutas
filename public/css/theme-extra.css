@@ -1,0 +1,197 @@
+/** stilos para la correcion de la pagina**/
+
+/** variables de entorno**/
+:root {
+    --color-amarillo-proani: #f9b800;
+    --color-blanco:#fff;
+    --color-negro-proani:#282828;
+
+  }
+
+/** menu header logo y nav **/
+.nav-header-container {
+    background-color: var(--color-amarillo-proani);
+}
+.logo-pro-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-negro-proani);
+}
+
+@media (max-width: 480px) {
+    .nav-header-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo-pro-center img {
+        max-height: 8rem;
+        width: 50%;
+        margin: 2rem auto;
+    }
+}
+
+
+
+@media (min-width: 481px) {
+    .logo-pro-center img {
+        max-height: 8rem;
+        width: 35%;
+        margin: 2rem auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .logo-pro-center img {
+        max-height: 8rem;
+        width: 70%;
+        margin: 2rem auto;
+    }
+
+}
+
+.menu-super-fondo{
+    background-color: var(--color-amarillo-proani);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+    .menu-super-fondo{
+        flex-direction: row;
+    }
+
+}
+/** boton buscar */
+/* Estilos para el icono (usando FontAwesome como ejemplo) */
+.icon-container i {
+  cursor: pointer;
+  padding-right: 5px;
+}
+
+/* Estilos para ocultar el campo de entrada de texto */
+.icon-container label,
+.icon-container input[type="text"] {
+  display: none;
+  transition: all 3s; /* Transición de 3 segundos para todos los estilos */
+  transform-origin: right center; /* Punto de origen de la transformación */
+}
+
+/* Estilos para mostrar el campo de entrada de texto cuando el icono está activo */
+.icon-container:hover label,
+.icon-container:hover input[type="text"] {
+  display: inline-block;
+  transform: scaleX(1); /* Escalar de derecha a izquierda */
+}
+
+/**lupa buscar */
+.lupa-buscar{
+    height: 3rem;
+    width: 3rem;
+    margin: 0 2rem;
+}
+.icon-container {
+    display: flex;
+    flex-direction: row;
+}
+.icon-container{
+    color: #000;
+    font-family: "AvenirBlack";
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    padding: 1rem 0rem;
+}
+/** carrusel **/
+
+.carrusel-alto img{
+    max-height: 50rem;
+}
+
+.link-proani{
+    color: #000;
+    text-decoration: none;
+}
+
+/** logos productos **/
+.contenedor-logos-producto{
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: -12px;
+}
+
+@media (min-width: 481px) {
+    .contenedor-logos-producto {
+        height: 4rem;
+        margin-top: -11px;
+    }
+}
+
+.imagen-productos{
+    background-image: url('../theme/proanisrl/img/carrusel/logos_productos/fondo-logos1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 481px) {
+    .imagen-productos {
+        /* background-size: cover; */
+        width: 80%;
+        height: 100%;
+    }
+}
+.contenedor-carrusel{
+    position: relative;
+}
+.imagen-productos img{
+    width: 100%;
+    height: 100%;
+}
+.contenedor-logos{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    max-width: 80%;
+}
+.contenedor-logos a img{
+    max-height: 2rem;
+}
+
+.img-logo {
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  .img-logo:active {
+    transform: scale(0.9);
+  }
+
+  .img-logo:hover {
+    transform: scale(1.2);
+  }
+
+
+
+
+
+
+
