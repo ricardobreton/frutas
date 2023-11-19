@@ -24,4 +24,11 @@ class EvoFruitController extends Controller
         // dd($secciones);
         return view('theme.evofruit.alcaldias')->with(compact('alcaldia','galeria', 'header','footer', 'videos', 'secciones'));
     }
+    public function reindex($slug){
+        $alcaldia = Alcaldia::where('nombre',$slug)->first();
+        if($alcaldia){
+            return redirect()->route('alcaldia.show',['alcaldia' => $slug]);
+        }
+        return redirect()->route('inicio');
+    }
 }

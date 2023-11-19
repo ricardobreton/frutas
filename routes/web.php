@@ -54,6 +54,7 @@ Route::group([
 /** rutas para el theme rbjevo*/
 Route::get('/', [EvoFruitController::class, 'index'])->name('inicio');
 Route::get('comunidades/{alcaldia}', [EvoFruitController::class, 'alcaldias'])->name('alcaldia.show');
+Route::get('/{slug}.html',  [EvoFruitController::class, 'reindex']);
 
 
 //Routes para el blog vista web//
