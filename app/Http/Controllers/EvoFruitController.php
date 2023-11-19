@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Alcaldia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class EvoFruitController extends Controller
 {
@@ -27,7 +28,11 @@ class EvoFruitController extends Controller
     public function reindex($slug){
         $alcaldia = Alcaldia::where('nombre',$slug)->first();
         if($alcaldia){
-            return redirect()->route('alcaldia.show',['alcaldia' => $slug]);
+            // return redirect()->route('alcaldia.show',['alcaldia' => $slug]);
+            // Construir la URL completa con el nuevo esquema (HTTPS)
+            $nuevaUrl = secure_url(route('alcaldia.show',['alcaldia' => $slug]));
+            // Redirigir a la nueva URL
+            return Redirect::to($nuevaUrl);
         }
         return redirect()->route('inicio');
     }
